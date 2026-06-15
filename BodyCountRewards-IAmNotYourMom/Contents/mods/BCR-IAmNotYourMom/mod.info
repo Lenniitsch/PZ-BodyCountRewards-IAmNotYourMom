@@ -1,7 +1,7 @@
 name=BodyCountRewards - I Am Not Your Mom
 id=BCR-IAmNotYourMom
 modversion=1.0.0
-icon=bcr_icon.png
+icon=bcraddon_icon.png
 poster=poster.png
 description=BCR addon mod. I am not your mom -- add whatever unrealistic, OP traits you want. Adds 2 positive and 4 negative vanilla traits excluded from the base BCR mod. Requires BodyCountRewards (BCR).
 tags=Build42;Multiplayer;Traits

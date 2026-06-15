@@ -1,0 +1,40 @@
+[ ALERT_CONFIG ]
+link1 = Steam Workshop = https://steamcommunity.com/sharedfiles/filedetails/?id=3745224257
+link2 = GitHub = https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom
+[ ------ ]
+
+[ v1.0.0 — Initial Release ]
+I'm not your mom. Add whatever unrealistic, overpowered traits you want.
+
+[b]What this does:[/b] Adds 2 positive and 4 negative vanilla traits
+that the base BCR mod excludes. More dangerous, more powerful.
+
+[b]Positive Traits (Earnable):[/b]
+[list]
+[*] [b]Brave[/b] — Panic reduction. Look a zombie in the eye and yawn.
+[*] [b]Desensitized[/b] — Complete panic immunity. You've seen things.
+    Nothing fazes you anymore.
+[/list]
+
+[b]Negative Traits (Removable):[/b]
+[list]
+[*] [b]Short Sighted[/b] — Can't see far. Glasses not included.
+[*] [b]Hard of Hearing[/b] — What? SPEAK UP.
+[*] [b]Insomniac[/b] — Sleep is for the weak. Also incompatible
+    with getting restful sleep.
+[*] [b]Deaf[/b] — Complete hearing loss. Hope your eyes are good.
+[/list]
+
+[b]Sandbox Options:[/b] Each trait has its own enable/disable toggle
+under the [b]BodyCountRewardsThirdPartyTraits[/b] sandbox page.
+Your mom can turn them off if she's reading over your shoulder.
+
+[b]For Mod Developers:[/b] This addon is also a living code example of
+BCR's third-party extensibility API. Check the source — call
+BCR.RegisterCustomTraits() with your trait data, add your sandbox
+toggles, and you're done. Traits merge automatically into the
+reward pools, stats catalog, and history.
+
+[b]Requires BodyCountRewards (BCR)[/b] loaded first.
+Safe to remove mid-game — earned traits stay on your character.
+[ ------ ]
