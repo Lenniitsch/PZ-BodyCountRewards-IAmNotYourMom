@@ -5,7 +5,7 @@
     "Sandbox_BCR_Addon_Enable_HardOfHearing": "Ağır İşiten",
     "Sandbox_BCR_Addon_Enable_HardOfHearing_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kaldırılmasına izin ver. <LINE><LINE> <RGB:0.6,1.0,0.2> Nadirlik: Az Bulunan <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_Insomniac": "Yorgun Kalkan",
-    "Sandbox_BCR_Addon_Enable_Insomniac_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kaldırılmasına izin ver. <LINE><LINE> <RGB:1.0,0.6,0.2> Nadirlik: Nadir <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Insomniac_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kaldırılmasına izin ver. <LINE><LINE> <RGB:0.4,0.6,1.0> Nadirlik: Nadir <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_Deaf": "Sağır",
     "Sandbox_BCR_Addon_Enable_Deaf_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kaldırılmasına izin ver. <LINE><LINE> <RGB:0.8,0.3,1.0> Nadirlik: Çok Nadir <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_Brave": "Cesur",
