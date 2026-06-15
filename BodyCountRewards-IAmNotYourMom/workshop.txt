@@ -70,15 +70,13 @@ description=[/list]
 description=[b]Full source (about 147 lines of Lua):[/b] [url=https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom]GitHub Repository[/url]
 description=
 description=[h2]Adding Traits From Other Mods[/h2]
-description=If you want to add traits from another mod (like Brita's, KI5, or custom trait packs), here is the right way to go about it:
+description=If you want to include traits from another mod in Body Count Rewards, here is how it works:
 description=[list]
-description=[*] [b]Ask the mod author first.[/b] Most modders are happy to see their work integrated. Send them a polite message. Do not just publish an addon using someone else's traits without permission.
-description=[*] [b]Respect their license.[/b] Every mod has a license. Read it. If you cannot find one, ask. MIT, CC, and public domain are free to use with credit. Some licenses restrict derivative works -- honor that.
-description=[*] [b]Offer to collaborate.[/b] Ask if they want to write the BCR addon themselves. It is only about 147 lines of Lua. If they do not have time, offer to write it and credit them as the trait author.
-description=[*] [b]Write it yourself if they say yes.[/b] Copy the file structure from this addon, plug in your traits from their mod, set up exclusions, and ship it. Credit the original mod prominently.
-description=[*] [b]Do not republish someone else's mod.[/b] An addon that wraps another mod's traits is a compatibility layer, not a replacement. Always point users to the original mod as a required dependency. Use [b]require=OtherModID[/b] in your mod.info.
+description=[*] [b]You do not ship their code.[/b] A BCR addon only references trait IDs (strings like "SWTraits:SWBouncer"). Players must have the original trait mod installed. Use [b]require=OtherModID[/b] in your mod.info so it loads first.
+description=[*] [b]Ask the mod author anyway.[/b] Even though you are not redistributing anything, it is the decent thing to do. Most modders appreciate knowing someone is building on their work. A quick message goes a long way.
+description=[*] [b]Offer to collaborate.[/b] Ask if they want to write the BCR addon themselves since it is only about 147 lines of Lua. If they do not have time, offer to do it and credit them as the trait author.
+description=[*] [b]Credit the original mod and author.[/b] Put their name in your description and link to their workshop page. This is an ecosystem, not a competition.
 description=[/list]
-description=[b]Treat other people's work with the same respect you want for yours.[/b] A permission request takes minutes. A stolen mod creates drama for years.
 description=
 description=[h2]Compatibility[/h2]
 description=[list]
