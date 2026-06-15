@@ -1,5 +1,5 @@
 -- ============================================================
--- BCR-IAmNotYourMom v1.0.0 — Addon for BodyCountRewards (BCR)
+-- BCR-IAmNotYourMom v1.0.0 -- Addon for BodyCountRewards (BCR)
 -- Adds unrealistic / overpowered vanilla traits that the base
 -- BCR mod considers "not lore-friendly."
 --
@@ -7,8 +7,9 @@
 -- BCR.RegisterCustomTraits() extensibility API.
 --
 -- Console commands:
---   BCRIAmNotYourMom_RunTests() — verify hooking + trait integrity
---   BCR_RunThirdPartyTests()    — core BCR check of all addon traits
+--   BCRIAmNotYourMom_RunTests() -- addon-specific + core checks
+--   BCR_RunThirdPartyTests()    -- core BCR check of all addons
+--   BCR.RunThirdPartyTests()    -- alias for above
 -- ============================================================
 
 BCR = BCR or {}
@@ -42,37 +43,18 @@ local EXCLUSIONS = {
 }
 
 -- ============================================================
--- REGISTRATION (core BCR handles all logging + diagnostics)
--- ============================================================
-
-local ok, count = pcall(function()
-    return BCR.RegisterCustomTraits(ADDON_NAME, SANDBOX_NAMESPACE, POSITIVE_TRAITS, NEGATIVE_TRAITS, EXCLUSIONS)
-end)
-
-if not ok then
-    print("[BCR-IAmNotYourMom] FATAL — registration crashed: " .. tostring(count))
-    return
-end
-if not count or count == 0 then
-    print("[BCR-IAmNotYourMom] FATAL — no traits registered. Is BodyCountRewards (BCR) loaded?")
-    return
-end
-
-print("[BCR-IAmNotYourMom] Loaded. Run BCRIAmNotYourMom_RunTests() or BCR_RunThirdPartyTests() to verify.")
-
--- ============================================================
--- SELF-TEST — runs addon-specific checks, then delegates to core
+-- SELF-TEST -- always defined, even if registration fails
 -- ============================================================
 
 function BCRIAmNotYourMom_RunTests()
-    local addonPassed, addonFailed = 0, 0
+    local passed, failed = 0, 0
 
     local function ok(msg, condition)
         if condition then
-            addonPassed = addonPassed + 1
+            passed = passed + 1
             print("[BCR-IAmNotYourMom Test] PASS: " .. msg)
         else
-            addonFailed = addonFailed + 1
+            failed = failed + 1
             print("[BCR-IAmNotYourMom Test] FAIL: " .. msg)
         end
     end
@@ -132,13 +114,34 @@ function BCRIAmNotYourMom_RunTests()
     end)
     ok("Fake trait rejected", okFake and cntFake == 0)
 
-    print("===== Addon: " .. tostring(addonPassed) .. " passed, " ..
-        tostring(addonFailed) .. " failed =====")
+    print("===== Addon: " .. tostring(passed) .. " passed, " ..
+        tostring(failed) .. " failed =====")
 
     local coreOk = true
     if BCR_RunThirdPartyTests then
         coreOk = BCR_RunThirdPartyTests()
     end
 
-    return addonFailed == 0 and coreOk
+    return failed == 0 and coreOk
 end
+
+-- ============================================================
+-- REGISTRATION (core BCR handles all logging + diagnostics)
+-- ============================================================
+
+local ok, count = pcall(function()
+    return BCR.RegisterCustomTraits(ADDON_NAME, SANDBOX_NAMESPACE, POSITIVE_TRAITS, NEGATIVE_TRAITS, EXCLUSIONS)
+end)
+
+if not ok then
+    print("[BCR-IAmNotYourMom] FATAL -- registration crashed: " .. tostring(count))
+    print("[BCR-IAmNotYourMom] Run BCRIAmNotYourMom_RunTests() to diagnose.")
+    return
+end
+if not count or count == 0 then
+    print("[BCR-IAmNotYourMom] FATAL -- no traits registered. Is BodyCountRewards (BCR) loaded before this addon?")
+    print("[BCR-IAmNotYourMom] Run BCRIAmNotYourMom_RunTests() to diagnose.")
+    return
+end
+
+print("[BCR-IAmNotYourMom] Loaded. Run BCRIAmNotYourMom_RunTests() or BCR.RunThirdPartyTests() to verify.")
