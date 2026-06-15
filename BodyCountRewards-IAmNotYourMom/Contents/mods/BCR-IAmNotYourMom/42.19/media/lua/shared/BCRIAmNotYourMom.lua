@@ -18,15 +18,15 @@ local ADDON_NAME = "I Am Not Your Mom"
 local SANDBOX_NAMESPACE = "IAmNotYourMom"
 
 local POSITIVE_TRAITS = {
-    { id = "BRAVE",          cost = 4 },
-    { id = "DESENSITIZED",   cost = 8 },
+    { id = "BRAVE",          cost = -4 },
+    { id = "DESENSITIZED",   cost = -8 },
 }
 
 local NEGATIVE_TRAITS = {
-    { id = "SHORT_SIGHTED",  cost = -2 },
-    { id = "HARD_OF_HEARING", cost = -4 },
-    { id = "INSOMNIAC",      cost = -6 },
-    { id = "DEAF",           cost = -12 },
+    { id = "SHORT_SIGHTED",  cost = 2 },
+    { id = "HARD_OF_HEARING", cost = 4 },
+    { id = "INSOMNIAC",      cost = 6 },
+    { id = "DEAF",           cost = 12 },
 }
 
 local EXCLUSIONS = {
