@@ -1,10 +1,10 @@
 {
-    "Sandbox_BodyCountRewardsThirdPartyTraits": "BodyCountRewards - Third Party Traits",
+    "Sandbox_BodyCountRewardsThirdPartyTraits": "BodyCountRewards - Addon Traits",
     "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED": "Short Sighted",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.8,0.8,0.8> Rarity: Common",
+    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.7,0.7,0.7> Rarity: Common",
     "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING": "Hard of Hearing",
     "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.6,1.0,0.2> Rarity: Uncommon",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC": "Insomniac",
+    "Sandbox_BCR_Addon_Enable_INSOMNIAC": "Restless Sleeper",
     "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:1.0,0.6,0.2> Rarity: Rare",
     "Sandbox_BCR_Addon_Enable_DEAF": "Deaf",
     "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.8,0.3,1.0> Rarity: Very Rare",

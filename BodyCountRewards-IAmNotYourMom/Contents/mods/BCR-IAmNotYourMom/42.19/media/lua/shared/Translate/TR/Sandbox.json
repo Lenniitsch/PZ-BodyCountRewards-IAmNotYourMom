@@ -1,15 +1,15 @@
 {
-    "Sandbox_BodyCountRewardsThirdPartyTraits": "BodyCountRewards - Third Party Traits",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED": "Short Sighted",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.8,0.8,0.8> Rarity: Common",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING": "Hard of Hearing",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.6,1.0,0.2> Rarity: Uncommon",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC": "Insomniac",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:1.0,0.6,0.2> Rarity: Rare",
-    "Sandbox_BCR_Addon_Enable_DEAF": "Deaf",
-    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.8,0.3,1.0> Rarity: Very Rare",
-    "Sandbox_BCR_Addon_Enable_BRAVE": "Brave",
-    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow earning this trait as a reward. <LINE><LINE> <RGB:0.6,1.0,0.2> Rarity: Uncommon",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED": "Desensitized",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow earning this trait as a reward. <LINE><LINE> <RGB:0.8,0.3,1.0> Rarity: Very Rare"
+    "Sandbox_BodyCountRewardsThirdPartyTraits": "Öldürme Ödülleri - Eklenti Özellikleri",
+    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED": "Miyop",
+    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kaldırılmasına izin ver. <LINE><LINE> <RGB:0.7,0.7,0.7> Nadirlik: Yaygın",
+    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING": "Ağır İşiten",
+    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kaldırılmasına izin ver. <LINE><LINE> <RGB:0.6,1.0,0.2> Nadirlik: Az Bulunan",
+    "Sandbox_BCR_Addon_Enable_INSOMNIAC": "Yorgun Kalkan",
+    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kaldırılmasına izin ver. <LINE><LINE> <RGB:1.0,0.6,0.2> Nadirlik: Nadir",
+    "Sandbox_BCR_Addon_Enable_DEAF": "Sağır",
+    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kaldırılmasına izin ver. <LINE><LINE> <RGB:0.8,0.3,1.0> Nadirlik: Çok Nadir",
+    "Sandbox_BCR_Addon_Enable_BRAVE": "Cesur",
+    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] POZİTİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kazanılmasına izin ver. <LINE><LINE> <RGB:0.6,1.0,0.2> Nadirlik: Az Bulunan",
+    "Sandbox_BCR_Addon_Enable_DESENSITIZED": "Soğuk Kanlı",
+    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] POZİTİF ÖZELLİK <LINE><LINE> <RGB:0.8,0.8,0.8> Bu özelliğin ödül olarak kazanılmasına izin ver. <LINE><LINE> <RGB:0.8,0.3,1.0> Nadirlik: Çok Nadir"
 }
