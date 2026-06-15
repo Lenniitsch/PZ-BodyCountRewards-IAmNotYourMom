@@ -1,15 +1,15 @@
 {
     "Sandbox_BodyCountRewardsThirdPartyTraits": "BodyCountRewards - 애드온 특성",
     "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED": "짧은 시야",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] 부정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 제거할 수 있습니다. <LINE><LINE> <RGB:0.7,0.7,0.7> 희귀도: 일반",
+    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] 부정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 제거할 수 있습니다. <LINE><LINE> <RGB:0.7,0.7,0.7> 희귀도: 일반 <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING": "어두운 귀",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] 부정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 제거할 수 있습니다. <LINE><LINE> <RGB:0.6,1.0,0.2> 희귀도: 고급",
+    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] 부정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 제거할 수 있습니다. <LINE><LINE> <RGB:0.6,1.0,0.2> 희귀도: 고급 <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_INSOMNIAC": "수면장애",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] 부정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 제거할 수 있습니다. <LINE><LINE> <RGB:1.0,0.6,0.2> 희귀도: 희귀",
+    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] 부정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 제거할 수 있습니다. <LINE><LINE> <RGB:1.0,0.6,0.2> 희귀도: 희귀 <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_DEAF": "청각 장애",
-    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] 부정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 제거할 수 있습니다. <LINE><LINE> <RGB:0.8,0.3,1.0> 희귀도: 매우 희귀",
+    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] 부정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 제거할 수 있습니다. <LINE><LINE> <RGB:0.8,0.3,1.0> 희귀도: 매우 희귀 <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_BRAVE": "용감함",
-    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] 긍정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 획득할 수 있습니다. <LINE><LINE> <RGB:0.6,1.0,0.2> 희귀도: 고급",
+    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] 긍정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 획득할 수 있습니다. <LINE><LINE> <RGB:0.6,1.0,0.2> 희귀도: 고급 <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_DESENSITIZED": "둔감한",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] 긍정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 획득할 수 있습니다. <LINE><LINE> <RGB:0.8,0.3,1.0> 희귀도: 매우 희귀"
+    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] 긍정 특성 <LINE><LINE> <RGB:0.8,0.8,0.8> 이 특성을 보상으로 획득할 수 있습니다. <LINE><LINE> <RGB:0.8,0.3,1.0> 희귀도: 매우 희귀 <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom"
 }

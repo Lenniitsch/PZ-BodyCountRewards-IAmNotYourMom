@@ -1,15 +1,15 @@
 {
     "Sandbox_BodyCountRewardsThirdPartyTraits": "Body Count Rewards - Addon Traits",
     "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED": "Kurzsichtig",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung entfernen. <LINE><LINE> <RGB:0.7,0.7,0.7> Seltenheit: Gewöhnlich",
+    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung entfernen. <LINE><LINE> <RGB:0.7,0.7,0.7> Seltenheit: Gewöhnlich <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING": "Schwerhörig",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung entfernen. <LINE><LINE> <RGB:0.6,1.0,0.2> Seltenheit: Ungewöhnlich",
+    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung entfernen. <LINE><LINE> <RGB:0.6,1.0,0.2> Seltenheit: Ungewöhnlich <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_INSOMNIAC": "Schlafgestört",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung entfernen. <LINE><LINE> <RGB:1.0,0.6,0.2> Seltenheit: Selten",
+    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung entfernen. <LINE><LINE> <RGB:1.0,0.6,0.2> Seltenheit: Selten <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_DEAF": "Taub",
-    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung entfernen. <LINE><LINE> <RGB:0.8,0.3,1.0> Seltenheit: Sehr Selten",
+    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung entfernen. <LINE><LINE> <RGB:0.8,0.3,1.0> Seltenheit: Sehr Selten <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_BRAVE": "Mutig",
-    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung freischalten. <LINE><LINE> <RGB:0.6,1.0,0.2> Seltenheit: Ungewöhnlich",
+    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung freischalten. <LINE><LINE> <RGB:0.6,1.0,0.2> Seltenheit: Ungewöhnlich <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_DESENSITIZED": "Desensibilisiert",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung freischalten. <LINE><LINE> <RGB:0.8,0.3,1.0> Seltenheit: Sehr Selten"
+    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVER TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Diesen Trait als Belohnung freischalten. <LINE><LINE> <RGB:0.8,0.3,1.0> Seltenheit: Sehr Selten <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom"
 }

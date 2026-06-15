@@ -1,15 +1,15 @@
 {
     "Sandbox_BodyCountRewardsThirdPartyTraits": "BodyCountRewards - Atributos de Addon",
     "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED": "Míope",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] ATRIBUTO NEGATIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite remover este atributo como recompensa. <LINE><LINE> <RGB:0.7,0.7,0.7> Raridade: Comum",
+    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] ATRIBUTO NEGATIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite remover este atributo como recompensa. <LINE><LINE> <RGB:0.7,0.7,0.7> Raridade: Comum <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING": "Ruim de Audição",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] ATRIBUTO NEGATIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite remover este atributo como recompensa. <LINE><LINE> <RGB:0.6,1.0,0.2> Raridade: Incomum",
+    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] ATRIBUTO NEGATIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite remover este atributo como recompensa. <LINE><LINE> <RGB:0.6,1.0,0.2> Raridade: Incomum <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_INSOMNIAC": "Sono Leve",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] ATRIBUTO NEGATIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite remover este atributo como recompensa. <LINE><LINE> <RGB:1.0,0.6,0.2> Raridade: Raro",
+    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] ATRIBUTO NEGATIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite remover este atributo como recompensa. <LINE><LINE> <RGB:1.0,0.6,0.2> Raridade: Raro <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_DEAF": "Surdo",
-    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] ATRIBUTO NEGATIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite remover este atributo como recompensa. <LINE><LINE> <RGB:0.8,0.3,1.0> Raridade: Muito Raro",
+    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] ATRIBUTO NEGATIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite remover este atributo como recompensa. <LINE><LINE> <RGB:0.8,0.3,1.0> Raridade: Muito Raro <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_BRAVE": "Corajoso",
-    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] ATRIBUTO POSITIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite ganhar este atributo como recompensa. <LINE><LINE> <RGB:0.6,1.0,0.2> Raridade: Incomum",
+    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] ATRIBUTO POSITIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite ganhar este atributo como recompensa. <LINE><LINE> <RGB:0.6,1.0,0.2> Raridade: Incomum <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
     "Sandbox_BCR_Addon_Enable_DESENSITIZED": "Destemido",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] ATRIBUTO POSITIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite ganhar este atributo como recompensa. <LINE><LINE> <RGB:0.8,0.3,1.0> Raridade: Muito Raro"
+    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] ATRIBUTO POSITIVO <LINE><LINE> <RGB:0.8,0.8,0.8> Permite ganhar este atributo como recompensa. <LINE><LINE> <RGB:0.8,0.3,1.0> Raridade: Muito Raro <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom"
 }
