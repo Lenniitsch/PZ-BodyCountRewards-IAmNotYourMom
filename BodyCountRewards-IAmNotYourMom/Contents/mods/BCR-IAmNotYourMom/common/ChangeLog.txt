@@ -3,6 +3,19 @@ link1 = Steam Workshop = https://steamcommunity.com/sharedfiles/filedetails/?id=
 link2 = GitHub = https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom,
 [ ------ ]
 
+[ v1.1.0 - Update ]
+
+TRAIT ID REFACTOR (matching BCR v1.3.1)
+- All trait IDs changed from UPPER_SNAKE_CASE to ResourceLocation format (base:Brave, base:Deaf, etc.).
+- Exclusion tables updated to match new format. Missing reverse exclusions added (Cowardly->Brave, Hemophobic->Desensitized, etc.).
+
+SANDBOX & TRANSLATIONS
+- Sandbox option keys renamed to PascalCase convention across all 11 languages.
+- Fixed rarity colors in tooltips: Rare tier now blue (matching main BCR), EN Common tier now standard gray.
+
+WORKSHOP PAGE
+- Rewritten for clarity: added developer guidance, Short Sighted FAQ, and "Adding Traits From Other Mods" section.
+
 [ v1.0.0 - Initial Release ]
 I'm not your mom. Add whatever unrealistic, overpowered traits you want.
 

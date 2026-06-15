@@ -1,6 +1,6 @@
-name=BodyCountRewards - I Am Not Your Mom
+name=BodyCountRewards (Addon)- I Am Not Your Mom
 id=BCR-IAmNotYourMom
-modversion=1.0.0
+modversion=1.1.0
 versionMin=42.19
 icon=bcraddon_icon.png
 poster=poster.png
