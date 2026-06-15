@@ -1,0 +1,45 @@
+VERSION = 1
+
+page = BodyCountRewardsThirdPartyTraits
+
+option IAmNotYourMom.allow_SHORT_SIGHTED
+{
+	type = boolean, default = true,
+	page = BodyCountRewardsThirdPartyTraits,
+	translation = Sandbox_BCR_Addon_Enable_SHORT_SIGHTED,
+}
+
+option IAmNotYourMom.allow_HARD_OF_HEARING
+{
+	type = boolean, default = true,
+	page = BodyCountRewardsThirdPartyTraits,
+	translation = Sandbox_BCR_Addon_Enable_HARD_OF_HEARING,
+}
+
+option IAmNotYourMom.allow_INSOMNIAC
+{
+	type = boolean, default = true,
+	page = BodyCountRewardsThirdPartyTraits,
+	translation = Sandbox_BCR_Addon_Enable_INSOMNIAC,
+}
+
+option IAmNotYourMom.allow_DEAF
+{
+	type = boolean, default = true,
+	page = BodyCountRewardsThirdPartyTraits,
+	translation = Sandbox_BCR_Addon_Enable_DEAF,
+}
+
+option IAmNotYourMom.allow_BRAVE
+{
+	type = boolean, default = true,
+	page = BodyCountRewardsThirdPartyTraits,
+	translation = Sandbox_BCR_Addon_Enable_BRAVE,
+}
+
+option IAmNotYourMom.allow_DESENSITIZED
+{
+	type = boolean, default = true,
+	page = BodyCountRewardsThirdPartyTraits,
+	translation = Sandbox_BCR_Addon_Enable_DESENSITIZED,
+}
