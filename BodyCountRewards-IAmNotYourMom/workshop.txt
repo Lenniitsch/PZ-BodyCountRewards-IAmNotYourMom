@@ -69,6 +69,17 @@ description=[*] BCR core also provides [b]BCR.RunThirdPartyTests()[/b] to verify
 description=[/list]
 description=[b]Full source (about 147 lines of Lua):[/b] [url=https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom]GitHub Repository[/url]
 description=
+description=[h2]Adding Traits From Other Mods[/h2]
+description=If you want to add traits from another mod (like Brita's, KI5, or custom trait packs), here is the right way to go about it:
+description=[list]
+description=[*] [b]Ask the mod author first.[/b] Most modders are happy to see their work integrated. Send them a polite message. Do not just publish an addon using someone else's traits without permission.
+description=[*] [b]Respect their license.[/b] Every mod has a license. Read it. If you cannot find one, ask. MIT, CC, and public domain are free to use with credit. Some licenses restrict derivative works -- honor that.
+description=[*] [b]Offer to collaborate.[/b] Ask if they want to write the BCR addon themselves. It is only about 147 lines of Lua. If they do not have time, offer to write it and credit them as the trait author.
+description=[*] [b]Write it yourself if they say yes.[/b] Copy the file structure from this addon, plug in your traits from their mod, set up exclusions, and ship it. Credit the original mod prominently.
+description=[*] [b]Do not republish someone else's mod.[/b] An addon that wraps another mod's traits is a compatibility layer, not a replacement. Always point users to the original mod as a required dependency. Use [b]require=OtherModID[/b] in your mod.info.
+description=[/list]
+description=[b]Treat other people's work with the same respect you want for yours.[/b] A permission request takes minutes. A stolen mod creates drama for years.
+description=
 description=[h2]Compatibility[/h2]
 description=[list]
 description=[*] Build 42.19+ (Unstable). SP and MP.
