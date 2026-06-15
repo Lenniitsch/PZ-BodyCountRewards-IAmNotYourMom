@@ -1,6 +1,6 @@
 version=1
 id=0
-title=BodyCountRewards - I Am Not Your Mom
+title=BodyCountRewards - I Am Not Your Mom (Addon)
 description=[i]Adds unrealistic, overpowered vanilla traits to BodyCountRewards.[/i]
 description=I am not your mom. Add whatever traits you want. Deaf? Fine. Blind? Why not. Can't feel fear anymore? Go for it.
 description=
