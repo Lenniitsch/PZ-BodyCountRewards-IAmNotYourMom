@@ -1,7 +1,5 @@
 VERSION = 1,
 
-page = BodyCountRewardsThirdPartyTraits
-
 option IAmNotYourMom.allow_SHORT_SIGHTED
 {
 	type = boolean, default = true,
