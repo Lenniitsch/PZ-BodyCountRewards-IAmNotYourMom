@@ -34,7 +34,7 @@ Each trait has its own enable/disable toggle in the `BodyCountRewardsThirdPartyT
 
 ## For Mod Developers
 
-**This mod is a living code example.** If you want to add your own traits to BodyCountRewards, download this mod and study `BCRIAmNotYourMom.lua`. The entire registration is only about 147 lines.
+**This mod is a living code example.** If you want to add your own traits to BodyCountRewards, download this mod and study `BCRIAmNotYourMom.lua`. The entire registration is only about 65 lines.
 
 Skip to the [Developer Guide](#developer-guide) below for a full walkthrough.
 
@@ -54,9 +54,7 @@ A step-by-step walkthrough for creating a BodyCountRewards trait addon.
 4. **Call `BCR.RegisterCustomTraits()`** to register them.
 5. **Write `sandbox-options.txt`** with one boolean toggle per trait.
 6. **Add translations** under `Translate/EN/Sandbox.json`.
-7. **Write a self-test function** and run `BCR.RunThirdPartyTests()`.
-8. **Test in-game** with the console commands listed below.
-
+7. **Test in-game** — run `BCR.RunThirdPartyTests()` in the console. BCR validates all addons at once.
 ## File Structure
 
 Your addon must follow this layout. Only files marked `[required]` are mandatory. Others are optional.
@@ -381,11 +379,10 @@ print("[YourAddon] Loaded. Run YourAddon_RunTests() or BCR.RunThirdPartyTests() 
 
 | Command | What It Does |
 |---------|-------------|
-| `<AddonPrefix>_RunTests()` | Runs your addon's self-test function. Covers registration, exclusions, and userdata resolution for your traits. |
 | `BCR_RunThirdPartyTests()` | Core BCR validation. Iterates all registered third-party traits and checks that each has a source, a sandbox namespace, and resolves to valid engine userdata. Runs against every addon at once. |
 | `BCR.RunThirdPartyTests()` | Alias for the above. |
 
-Run your self-test first, then run `BCR.RunThirdPartyTests()` to confirm your traits pass core validation.
+Run `BCR.RunThirdPartyTests()` to confirm your traits pass core validation.
 
 ### What BCR_RunThirdPartyTests Validates
 
@@ -393,31 +390,20 @@ Run your self-test first, then run `BCR.RunThirdPartyTests()` to confirm your tr
 - Every registered trait has a non-nil sandbox namespace (`BCR.CustomTraitNamespaces[traitId]`)
 - Every trait ID resolves to valid engine userdata via `BCR.GetTraitUserdata(traitId)`
 
-It does NOT test sandbox toggles, trait application, pool building, or network sync. You need your own test function for gameplay-level assertions.
+It does NOT test gameplay-level assertions. While optional, you can write your own test function if you need deeper validation.
 
-### What to Test in Your Addon
-
-- Each trait appears in `BCR.CustomPositiveTraits` or `BCR.CustomNegativeTraits`
-- Source name and namespace are correct
-- Each exclusion exists as expected (both directions if applicable)
-- `BCR.GetTraitUserdata()` returns non-nil for each trait
-- Re-registration of the same trait is blocked (returns 0)
-- Fake/invalid trait IDs are rejected (returns 0)
-
-See `BCRIAmNotYourMom.lua` for the full working example with 23 test cases.
+See `BCRIAmNotYourMom.lua` for the complete registration example.
 
 ---
 
 ## Verification Checklist
 
-After building your addon, verify everything works. Run these commands in the PZ console (in-game, after loading a save):
-
+After building your addon, verify everything works. Run this command in the PZ console:
 ```
-YourAddon_RunTests()     -- your self-test
 BCR.RunThirdPartyTests() -- BCR's core validation of ALL addons
 ```
 
-**If either returns any failures, your addon has a bug.** Do not ship until both pass with zero failures.
+**If it returns any failures, your addon has a bug.** Do not ship until it passes.
 
 `BCR.RunThirdPartyTests()` is the **mandatory final gate**. It checks that every trait registered by every addon:
 - Has a valid source name
