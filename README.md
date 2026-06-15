@@ -127,6 +127,7 @@ Each trait needs a boolean toggle. The page must be `BodyCountRewardsThirdPartyT
 ```txt
 VERSION = 1,
 
+-- Vanilla trait: "base:Brave" -> allow_base_Brave
 option YourNamespace.allow_base_Brave
 {
     type = boolean,
@@ -135,19 +136,20 @@ option YourNamespace.allow_base_Brave
     translation = BCR_Addon_Enable_Brave,
 }
 
-option YourNamespace.allow_base_Desensitized
+-- Custom mod trait: "SomeMod:TraitName" -> allow_SomeMod_TraitName
+option YourNamespace.allow_SomeMod_TraitName
 {
     type = boolean,
     default = true,
     page = BodyCountRewardsThirdPartyTraits,
-    translation = BCR_Addon_Enable_Desensitized,
+    translation = BCR_Addon_Enable_TraitName,
 }
 ```
 
 Key rules:
 - `VERSION = 1,` header line is required.
 - `page = BodyCountRewardsThirdPartyTraits` is the fixed page name. BCR reads all options on this page.
-- `option <Namespace>.allow_<TraitId>` is the naming convention. Replace `:` in the trait ID with `_` (e.g. `"base:Brave"` becomes `allow_base_Brave`). The namespace must match your `RegisterCustomTraits()` call.
+- Option name pattern: `allow_<TraitId>` where `:` in the trait ID becomes `_` (e.g. `"base:Brave"` -> `allow_base_Brave`, `"SomeMod:TraitName"` -> `allow_SomeMod_TraitName`). The namespace must match your `RegisterCustomTraits()` call.
 - `translation` key is your translation lookup key. Define it in `Sandbox.json`.
 
 ## Translation Setup
@@ -310,11 +312,45 @@ function YourAddon_RunTests()
     ok("BCR global exists", BCR ~= nil)
     ok("RegisterCustomTraits exists", BCR.RegisterCustomTraits ~= nil)
 
-    -- Add your own assertions here
+    -- Check your traits are in the merged lists
+    local function isInList(list, id)
+        if not list then return false end
+        for _, e in ipairs(list) do
+            if e.id == id then return true end
+        end
+        return false
+    end
+    ok("Trait registered (positive)", isInList(BCR.CustomPositiveTraits, "base:TraitId"))
+    ok("Trait registered (negative)", isInList(BCR.CustomNegativeTraits, "base:WeaknessId"))
+
+    -- Metadata checks
+    ok("Source name correct", BCR.CustomTraitSources["base:TraitId"] == ADDON_NAME)
+    ok("Sandbox namespace correct", BCR.CustomTraitNamespaces["base:TraitId"] == SANDBOX_NAMESPACE)
+
+    -- Engine resolution (the definitive test)
+    ok("GetTraitUserdata resolves", BCR.GetTraitUserdata("base:TraitId") ~= nil)
+    ok("Sandbox toggle active", BCR.IsTraitAllowed("base:TraitId") == true)
+
+    -- Exclusion checks
+    ok("Exclusion exists", exclContains("base:TraitId", "base:ConflictingTrait"))
+    ok("Reverse exclusion exists", exclContains("base:ConflictingTrait", "base:TraitId"))
+
+    -- Re-registration must be blocked
+    local okRereg, cnt = pcall(function()
+        return BCR.RegisterCustomTraits(ADDON_NAME, SANDBOX_NAMESPACE, {{id = "base:TraitId", cost = -4}}, nil, nil)
+    end)
+    ok("Re-registration blocked", okRereg and cnt == 0)
+
+    -- Fake traits must be rejected
+    local okFake, cntFake = pcall(function()
+        return BCR.RegisterCustomTraits(ADDON_NAME, SANDBOX_NAMESPACE, {{id = "FAKE_TRAIT", cost = -5}}, nil, nil)
+    end)
+    ok("Fake trait rejected", okFake and cntFake == 0)
 
     print("===== Addon: " .. tostring(passed) .. " passed, " ..
         tostring(failed) .. " failed =====")
 
+    -- > MANDATORY: Run BCR's core validation against ALL registered addons
     local coreOk = true
     if BCR_RunThirdPartyTests then
         coreOk = BCR_RunThirdPartyTests()
@@ -370,6 +406,26 @@ It does NOT test sandbox toggles, trait application, pool building, or network s
 
 See `BCRIAmNotYourMom.lua` for the full working example with 23 test cases.
 
+---
+
+## Verification Checklist
+
+After building your addon, verify everything works. Run these commands in the PZ console (in-game, after loading a save):
+
+```
+YourAddon_RunTests()     -- your self-test
+BCR.RunThirdPartyTests() -- BCR's core validation of ALL addons
+```
+
+**If either returns any failures, your addon has a bug.** Do not ship until both pass with zero failures.
+
+`BCR.RunThirdPartyTests()` is the **mandatory final gate**. It checks that every trait registered by every addon:
+- Has a valid source name
+- Has a valid sandbox namespace
+- Resolves to real engine userdata via `CharacterTrait.get(ResourceLocation.of(traitId))`
+
+If you register a custom mod trait like `SWTraits:SWBouncer` and `BCR.RunThirdPartyTests()` passes, you have confirmed the trait ID format, namespace, and engine resolution are all correct.
+
 ## Compatibility
 
 - Build 42.19+ (Unstable)
@@ -384,7 +440,7 @@ See `BCRIAmNotYourMom.lua` for the full working example with 23 test cases.
 Positive (earnable) traits need negative costs. Negative (removable) traits need positive costs. Getting this wrong will log warnings from BCR and produce incorrect drop weights.
 
 ### 2. Trait ID does not match ResourceLocation format
-Trait IDs must use `namespace:PascalCase` format (e.g. `"base:Brave"`, `"base:HardOfHearing"`). BCR validates every ID against the engine via `CharacterTrait.get(ResourceLocation.of(traitId))`. Bogus IDs are rejected silently (the registration returns 0 for them).
+Trait IDs must use `namespace:PascalCase` format (e.g. `"base:Brave"`, `"SWTraits:SWBouncer"`). BCR resolves every trait ID via `CharacterTrait.get(ResourceLocation.of(traitId))`. This works for vanilla traits (`base:` namespace) and custom mod traits equally. Bogus IDs are rejected (registration returns 0 for them).
 
 ### 3. Exclusions not bidirectional
 If `["base:TraitA"] = {"base:TraitB"}` is defined, `["base:TraitB"] = {"base:TraitA"}` must also be defined. BCR does not auto-reverse exclusions.
@@ -395,16 +451,13 @@ Place your Lua file in `shared/`. If placed in `client/` or `server/`, it will n
 ### 5. Sandbox namespace mismatch
 The namespace passed to `RegisterCustomTraits()` must match the prefix in your `sandbox-options.txt` option names (`<namespace>.allow_<TraitId>`).
 
-### 6. Trait IDs must use ResourceLocation format
-Trait IDs must use `namespace:PascalCase` format (e.g. `"base:Brave"`, `"YourMod:TraitName"`). BCR resolves every trait ID via `CharacterTrait.get(ResourceLocation.of(traitId))`. This works for vanilla traits (`base:` namespace) and custom mod traits equally.
-
-### 7. Removing addon mid-save
+### 6. Removing addon mid-save
 If your addon registers custom traits that do not exist in vanilla PZ, removing the addon may crash saves that still reference those traits. This is your responsibility as the addon author. This addon only registers vanilla traits (Brave, Desensitized, etc.), so it is safe to remove.
 
-### 8. Not checking the return count
+### 7. Not checking the return count
 `RegisterCustomTraits()` returns a number. Zero means failure. Always check the return value.
 
-### 9. Not wrapping registration in pcall
+### 8. Not wrapping registration in pcall
 If BCR is not loaded, `RegisterCustomTraits` will not exist and the call will crash. Always `pcall`-wrap.
 
 ## License
