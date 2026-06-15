@@ -70,7 +70,7 @@ description=[/list]
 description=[b]Full source (about 147 lines of Lua):[/b] [url=https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom]GitHub Repository[/url]
 description=
 description=[h2]Adding Traits From Other Mods[/h2]
-description=Want traits from another mod included in Body Count Rewards? [b]Ask the mod author politely.[/b] A BCR addon only references trait IDs so nothing gets redistributed, but it is the decent thing to do. Send them a message. Most modders appreciate knowing someone is building on their work.
+description=Want traits from your favorite mod to work with Body Count Rewards? Ask the mod author about it. Politely. A friendly message goes a long way, and the worst they can say is no. Point them to this addon or the [url=https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom]GitHub repository[/url] for developer guidance — it is only about 150 lines of Lua.
 description=
 description=[h2]Compatibility[/h2]
 description=[list]
