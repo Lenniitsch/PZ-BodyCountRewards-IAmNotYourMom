@@ -18,28 +18,32 @@ local ADDON_NAME = "I Am Not Your Mom"
 local SANDBOX_NAMESPACE = "IAmNotYourMom"
 
 local POSITIVE_TRAITS = {
-    { id = "BRAVE",          cost = -4 },
-    { id = "DESENSITIZED",   cost = -8 },
+    { id = "base:Brave",          cost = -4 },
+    { id = "base:Desensitized",   cost = -8 },
 }
 
 local NEGATIVE_TRAITS = {
-    { id = "SHORT_SIGHTED",  cost = 2 },
-    { id = "HARD_OF_HEARING", cost = 4 },
-    { id = "INSOMNIAC",      cost = 6 },
-    { id = "DEAF",           cost = 12 },
+    { id = "base:ShortSighted",  cost = 2 },
+    { id = "base:HardOfHearing", cost = 4 },
+    { id = "base:Insomniac",      cost = 6 },
+    { id = "base:Deaf",           cost = 12 },
 }
 
 local EXCLUSIONS = {
-    BRAVE               = {"COWARDLY", "AGORAPHOBIC", "CLAUSTROPHOBIC"},
-    DESENSITIZED        = {"ADRENALINE_JUNKIE", "AGORAPHOBIC", "CLAUSTROPHOBIC", "COWARDLY", "HEMOPHOBIC"},
-    SHORT_SIGHTED       = {"EAGLE_EYED"},
-    HARD_OF_HEARING     = {"KEEN_HEARING", "DEAF"},
-    INSOMNIAC           = {"NEEDS_LESS_SLEEP"},
-    DEAF                = {"KEEN_HEARING", "HARD_OF_HEARING"},
-    ADRENALINE_JUNKIE   = {"DESENSITIZED"},
-    EAGLE_EYED          = {"SHORT_SIGHTED"},
-    KEEN_HEARING        = {"HARD_OF_HEARING", "DEAF"},
-    NEEDS_LESS_SLEEP    = {"INSOMNIAC"},
+    ["base:Brave"]               = {"base:Cowardly", "base:Agoraphobic", "base:Claustrophobic"},
+    ["base:Desensitized"]        = {"base:AdrenalineJunkie", "base:Agoraphobic", "base:Claustrophobic", "base:Cowardly", "base:Hemophobic"},
+    ["base:ShortSighted"]       = {"base:EagleEyed"},
+    ["base:HardOfHearing"]     = {"base:KeenHearing", "base:Deaf"},
+    ["base:Insomniac"]           = {"base:NeedsLessSleep"},
+    ["base:Deaf"]                = {"base:KeenHearing", "base:HardOfHearing"},
+    ["base:AdrenalineJunkie"]   = {"base:Desensitized"},
+    ["base:EagleEyed"]          = {"base:ShortSighted"},
+    ["base:KeenHearing"]        = {"base:HardOfHearing", "base:Deaf"},
+    ["base:NeedsLessSleep"]    = {"base:Insomniac"},
+    ["base:Cowardly"]            = {"base:Brave", "base:Desensitized"},
+    ["base:Agoraphobic"]         = {"base:Brave", "base:Desensitized"},
+    ["base:Claustrophobic"]      = {"base:Brave", "base:Desensitized"},
+    ["base:Hemophobic"]          = {"base:Desensitized"},
 }
 
 -- ============================================================
@@ -72,15 +76,15 @@ function BCRIAmNotYourMom_RunTests()
         return false
     end
 
-    ok("BRAVE registered", isInList(BCR.CustomPositiveTraits, "BRAVE"))
-    ok("DESENSITIZED registered", isInList(BCR.CustomPositiveTraits, "DESENSITIZED"))
-    ok("SHORT_SIGHTED registered", isInList(BCR.CustomNegativeTraits, "SHORT_SIGHTED"))
-    ok("DEAF registered", isInList(BCR.CustomNegativeTraits, "DEAF"))
-    ok("INSOMNIAC registered", isInList(BCR.CustomNegativeTraits, "INSOMNIAC"))
-    ok("HARD_OF_HEARING registered", isInList(BCR.CustomNegativeTraits, "HARD_OF_HEARING"))
+    ok("BRAVE registered", isInList(BCR.CustomPositiveTraits, "base:Brave"))
+    ok("DESENSITIZED registered", isInList(BCR.CustomPositiveTraits, "base:Desensitized"))
+    ok("SHORT_SIGHTED registered", isInList(BCR.CustomNegativeTraits, "base:ShortSighted"))
+    ok("DEAF registered", isInList(BCR.CustomNegativeTraits, "base:Deaf"))
+    ok("INSOMNIAC registered", isInList(BCR.CustomNegativeTraits, "base:Insomniac"))
+    ok("HARD_OF_HEARING registered", isInList(BCR.CustomNegativeTraits, "base:HardOfHearing"))
 
-    ok("Source name correct for BRAVE", BCR.CustomTraitSources["BRAVE"] == ADDON_NAME)
-    ok("Sandbox namespace correct", BCR.CustomTraitNamespaces["BRAVE"] == SANDBOX_NAMESPACE)
+    ok("Source name correct for BRAVE", BCR.CustomTraitSources["base:Brave"] == ADDON_NAME)
+    ok("Sandbox namespace correct", BCR.CustomTraitNamespaces["base:Brave"] == SANDBOX_NAMESPACE)
 
     local function exclContains(traitId, excludedId)
         local list = BCR.Exclusions and BCR.Exclusions[traitId]
@@ -91,21 +95,21 @@ function BCRIAmNotYourMom_RunTests()
         return false
     end
 
-    ok("BRAVE -> COWARDLY", exclContains("BRAVE", "COWARDLY"))
-    ok("DESENSITIZED -> ADRENALINE_JUNKIE", exclContains("DESENSITIZED", "ADRENALINE_JUNKIE"))
-    ok("DESENSITIZED -> HEMOPHOBIC", exclContains("DESENSITIZED", "HEMOPHOBIC"))
-    ok("SHORT_SIGHTED -> EAGLE_EYED", exclContains("SHORT_SIGHTED", "EAGLE_EYED"))
-    ok("DEAF -> KEEN_HEARING", exclContains("DEAF", "KEEN_HEARING"))
-    ok("INSOMNIAC -> NEEDS_LESS_SLEEP", exclContains("INSOMNIAC", "NEEDS_LESS_SLEEP"))
-    ok("Reverse: ADRENALINE_JUNKIE -> DESENSITIZED", exclContains("ADRENALINE_JUNKIE", "DESENSITIZED"))
-    ok("Reverse: KEEN_HEARING -> DEAF", exclContains("KEEN_HEARING", "DEAF"))
-    ok("Reverse: NEEDS_LESS_SLEEP -> INSOMNIAC", exclContains("NEEDS_LESS_SLEEP", "INSOMNIAC"))
+    ok("BRAVE -> COWARDLY", exclContains("base:Brave", "base:Cowardly"))
+    ok("DESENSITIZED -> ADRENALINE_JUNKIE", exclContains("base:Desensitized", "base:AdrenalineJunkie"))
+    ok("DESENSITIZED -> HEMOPHOBIC", exclContains("base:Desensitized", "base:Hemophobic"))
+    ok("SHORT_SIGHTED -> EAGLE_EYED", exclContains("base:ShortSighted", "base:EagleEyed"))
+    ok("DEAF -> KEEN_HEARING", exclContains("base:Deaf", "base:KeenHearing"))
+    ok("INSOMNIAC -> NEEDS_LESS_SLEEP", exclContains("base:Insomniac", "base:NeedsLessSleep"))
+    ok("Reverse: ADRENALINE_JUNKIE -> DESENSITIZED", exclContains("base:AdrenalineJunkie", "base:Desensitized"))
+    ok("Reverse: KEEN_HEARING -> DEAF", exclContains("base:KeenHearing", "base:Deaf"))
+    ok("Reverse: NEEDS_LESS_SLEEP -> INSOMNIAC", exclContains("base:NeedsLessSleep", "base:Insomniac"))
 
-    ok("GetTraitUserdata resolves BRAVE", BCR.GetTraitUserdata("BRAVE") ~= nil)
-    ok("GetTraitUserdata resolves DEAF", BCR.GetTraitUserdata("DEAF") ~= nil)
+    ok("GetTraitUserdata resolves BRAVE", BCR.GetTraitUserdata("base:Brave") ~= nil)
+    ok("GetTraitUserdata resolves DEAF", BCR.GetTraitUserdata("base:Deaf") ~= nil)
 
     local okRereg, cnt = pcall(function()
-        return BCR.RegisterCustomTraits(ADDON_NAME, SANDBOX_NAMESPACE, {{id = "BRAVE", cost = 4}}, nil, nil)
+        return BCR.RegisterCustomTraits(ADDON_NAME, SANDBOX_NAMESPACE, {{id = "base:Brave", cost = 4}}, nil, nil)
     end)
     ok("Re-registration of BRAVE blocked", okRereg and cnt == 0)
 

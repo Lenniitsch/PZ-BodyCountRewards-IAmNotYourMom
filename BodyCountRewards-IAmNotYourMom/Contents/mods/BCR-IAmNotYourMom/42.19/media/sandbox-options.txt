@@ -1,43 +1,43 @@
 VERSION = 1,
 
-option IAmNotYourMom.allow_SHORT_SIGHTED
+option IAmNotYourMom.allow_base_ShortSighted
 {
 	type = boolean, default = true,
 	page = BodyCountRewardsThirdPartyTraits,
-	translation = BCR_Addon_Enable_SHORT_SIGHTED,
+	translation = BCR_Addon_Enable_ShortSighted,
 }
 
-option IAmNotYourMom.allow_HARD_OF_HEARING
+option IAmNotYourMom.allow_base_HardOfHearing
 {
 	type = boolean, default = true,
 	page = BodyCountRewardsThirdPartyTraits,
-	translation = BCR_Addon_Enable_HARD_OF_HEARING,
+	translation = BCR_Addon_Enable_HardOfHearing,
 }
 
-option IAmNotYourMom.allow_INSOMNIAC
+option IAmNotYourMom.allow_base_Insomniac
 {
 	type = boolean, default = true,
 	page = BodyCountRewardsThirdPartyTraits,
-	translation = BCR_Addon_Enable_INSOMNIAC,
+	translation = BCR_Addon_Enable_Insomniac,
 }
 
-option IAmNotYourMom.allow_DEAF
+option IAmNotYourMom.allow_base_Deaf
 {
 	type = boolean, default = true,
 	page = BodyCountRewardsThirdPartyTraits,
-	translation = BCR_Addon_Enable_DEAF,
+	translation = BCR_Addon_Enable_Deaf,
 }
 
-option IAmNotYourMom.allow_BRAVE
+option IAmNotYourMom.allow_base_Brave
 {
 	type = boolean, default = true,
 	page = BodyCountRewardsThirdPartyTraits,
-	translation = BCR_Addon_Enable_BRAVE,
+	translation = BCR_Addon_Enable_Brave,
 }
 
-option IAmNotYourMom.allow_DESENSITIZED
+option IAmNotYourMom.allow_base_Desensitized
 {
 	type = boolean, default = true,
 	page = BodyCountRewardsThirdPartyTraits,
-	translation = BCR_Addon_Enable_DESENSITIZED,
+	translation = BCR_Addon_Enable_Desensitized,
 }

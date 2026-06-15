@@ -1,15 +1,15 @@
 {
     "Sandbox_BodyCountRewardsThirdPartyTraits": "BodyCountRewards - Риски аддону",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED": "Короткозорий",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] НЕГАТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє прибрати цю риску як нагороду. <LINE><LINE> <RGB:0.7,0.7,0.7> Рідкісність: Звичайна <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING": "Слабкий слух",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] НЕГАТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє прибрати цю риску як нагороду. <LINE><LINE> <RGB:0.6,1.0,0.2> Рідкісність: Нечаста <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC": "Хронічна втома",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] НЕГАТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє прибрати цю риску як нагороду. <LINE><LINE> <RGB:1.0,0.6,0.2> Рідкісність: Рідкісна <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_DEAF": "Глухий",
-    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] НЕГАТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє прибрати цю риску як нагороду. <LINE><LINE> <RGB:0.8,0.3,1.0> Рідкісність: Дуже Рідкісна <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_BRAVE": "Хоробрий",
-    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] ПОЗИТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє отримати цю риску як нагороду. <LINE><LINE> <RGB:0.6,1.0,0.2> Рідкісність: Нечаста <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED": "Залізна психіка",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] ПОЗИТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє отримати цю риску як нагороду. <LINE><LINE> <RGB:0.8,0.3,1.0> Рідкісність: Дуже Рідкісна <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom"
+    "Sandbox_BCR_Addon_Enable_ShortSighted": "Короткозорий",
+    "Sandbox_BCR_Addon_Enable_ShortSighted_tooltip": "<RGB:1.0,0.4,0.4> [-] НЕГАТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє прибрати цю риску як нагороду. <LINE><LINE> <RGB:0.7,0.7,0.7> Рідкісність: Звичайна <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_HardOfHearing": "Слабкий слух",
+    "Sandbox_BCR_Addon_Enable_HardOfHearing_tooltip": "<RGB:1.0,0.4,0.4> [-] НЕГАТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє прибрати цю риску як нагороду. <LINE><LINE> <RGB:0.6,1.0,0.2> Рідкісність: Нечаста <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Insomniac": "Хронічна втома",
+    "Sandbox_BCR_Addon_Enable_Insomniac_tooltip": "<RGB:1.0,0.4,0.4> [-] НЕГАТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє прибрати цю риску як нагороду. <LINE><LINE> <RGB:1.0,0.6,0.2> Рідкісність: Рідкісна <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Deaf": "Глухий",
+    "Sandbox_BCR_Addon_Enable_Deaf_tooltip": "<RGB:1.0,0.4,0.4> [-] НЕГАТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє прибрати цю риску як нагороду. <LINE><LINE> <RGB:0.8,0.3,1.0> Рідкісність: Дуже Рідкісна <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Brave": "Хоробрий",
+    "Sandbox_BCR_Addon_Enable_Brave_tooltip": "<RGB:0.6,1.0,0.2> [+] ПОЗИТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє отримати цю риску як нагороду. <LINE><LINE> <RGB:0.6,1.0,0.2> Рідкісність: Нечаста <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Desensitized": "Залізна психіка",
+    "Sandbox_BCR_Addon_Enable_Desensitized_tooltip": "<RGB:0.6,1.0,0.2> [+] ПОЗИТИВНА РИСКА <LINE><LINE> <RGB:0.8,0.8,0.8> Дозволяє отримати цю риску як нагороду. <LINE><LINE> <RGB:0.8,0.3,1.0> Рідкісність: Дуже Рідкісна <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom"
 }

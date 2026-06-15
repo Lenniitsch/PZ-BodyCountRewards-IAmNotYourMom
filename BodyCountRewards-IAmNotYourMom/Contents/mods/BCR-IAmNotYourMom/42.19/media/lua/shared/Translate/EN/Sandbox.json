@@ -1,15 +1,15 @@
 {
     "Sandbox_BodyCountRewardsThirdPartyTraits": "BodyCountRewards - Addon Traits",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED": "Short Sighted",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.7,0.7,0.7> Rarity: Common <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING": "Hard of Hearing",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.6,1.0,0.2> Rarity: Uncommon <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC": "Restless Sleeper",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:1.0,0.6,0.2> Rarity: Rare <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_DEAF": "Deaf",
-    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.8,0.3,1.0> Rarity: Very Rare <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_BRAVE": "Brave",
-    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow earning this trait as a reward. <LINE><LINE> <RGB:0.6,1.0,0.2> Rarity: Uncommon <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED": "Desensitized",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow earning this trait as a reward. <LINE><LINE> <RGB:0.8,0.3,1.0> Rarity: Very Rare <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom"
+    "Sandbox_BCR_Addon_Enable_ShortSighted": "Short Sighted",
+    "Sandbox_BCR_Addon_Enable_ShortSighted_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.7,0.7,0.7> Rarity: Common <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_HardOfHearing": "Hard of Hearing",
+    "Sandbox_BCR_Addon_Enable_HardOfHearing_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.6,1.0,0.2> Rarity: Uncommon <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Insomniac": "Restless Sleeper",
+    "Sandbox_BCR_Addon_Enable_Insomniac_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:1.0,0.6,0.2> Rarity: Rare <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Deaf": "Deaf",
+    "Sandbox_BCR_Addon_Enable_Deaf_tooltip": "<RGB:1.0,0.4,0.4> [-] NEGATIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow removing this trait as a reward. <LINE><LINE> <RGB:0.8,0.3,1.0> Rarity: Very Rare <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Brave": "Brave",
+    "Sandbox_BCR_Addon_Enable_Brave_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow earning this trait as a reward. <LINE><LINE> <RGB:0.6,1.0,0.2> Rarity: Uncommon <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Desensitized": "Desensitized",
+    "Sandbox_BCR_Addon_Enable_Desensitized_tooltip": "<RGB:0.6,1.0,0.2> [+] POSITIVE TRAIT <LINE><LINE> <RGB:0.8,0.8,0.8> Allow earning this trait as a reward. <LINE><LINE> <RGB:0.8,0.3,1.0> Rarity: Very Rare <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom"
 }

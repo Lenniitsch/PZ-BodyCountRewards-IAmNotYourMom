@@ -1,15 +1,15 @@
 {
     "Sandbox_BodyCountRewardsThirdPartyTraits": "Nagrody za Zabójstwa - Cechy Addonu",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED": "Krótkowzroczność",
-    "Sandbox_BCR_Addon_Enable_SHORT_SIGHTED_tooltip": "<RGB:1.0,0.4,0.4> [-] CECHA NEGATYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala usunąć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.7,0.7,0.7> Rzadkość: Powszechny <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING": "Niedosłyszy",
-    "Sandbox_BCR_Addon_Enable_HARD_OF_HEARING_tooltip": "<RGB:1.0,0.4,0.4> [-] CECHA NEGATYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala usunąć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.6,1.0,0.2> Rzadkość: Niepospolity <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC": "Niespokojny sen",
-    "Sandbox_BCR_Addon_Enable_INSOMNIAC_tooltip": "<RGB:1.0,0.4,0.4> [-] CECHA NEGATYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala usunąć tę cechę jako nagrodę. <LINE><LINE> <RGB:1.0,0.6,0.2> Rzadkość: Rzadki <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_DEAF": "Głuchy",
-    "Sandbox_BCR_Addon_Enable_DEAF_tooltip": "<RGB:1.0,0.4,0.4> [-] CECHA NEGATYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala usunąć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.8,0.3,1.0> Rzadkość: Bardzo Rzadki <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_BRAVE": "Odwaga",
-    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "<RGB:0.6,1.0,0.2> [+] CECHA POZYTYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala zdobyć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.6,1.0,0.2> Rzadkość: Niepospolity <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED": "Zimna krew",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "<RGB:0.6,1.0,0.2> [+] CECHA POZYTYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala zdobyć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.8,0.3,1.0> Rzadkość: Bardzo Rzadki <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom"
+    "Sandbox_BCR_Addon_Enable_ShortSighted": "Krótkowzroczność",
+    "Sandbox_BCR_Addon_Enable_ShortSighted_tooltip": "<RGB:1.0,0.4,0.4> [-] CECHA NEGATYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala usunąć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.7,0.7,0.7> Rzadkość: Powszechny <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_HardOfHearing": "Niedosłyszy",
+    "Sandbox_BCR_Addon_Enable_HardOfHearing_tooltip": "<RGB:1.0,0.4,0.4> [-] CECHA NEGATYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala usunąć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.6,1.0,0.2> Rzadkość: Niepospolity <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Insomniac": "Niespokojny sen",
+    "Sandbox_BCR_Addon_Enable_Insomniac_tooltip": "<RGB:1.0,0.4,0.4> [-] CECHA NEGATYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala usunąć tę cechę jako nagrodę. <LINE><LINE> <RGB:1.0,0.6,0.2> Rzadkość: Rzadki <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Deaf": "Głuchy",
+    "Sandbox_BCR_Addon_Enable_Deaf_tooltip": "<RGB:1.0,0.4,0.4> [-] CECHA NEGATYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala usunąć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.8,0.3,1.0> Rzadkość: Bardzo Rzadki <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Brave": "Odwaga",
+    "Sandbox_BCR_Addon_Enable_Brave_tooltip": "<RGB:0.6,1.0,0.2> [+] CECHA POZYTYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala zdobyć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.6,1.0,0.2> Rzadkość: Niepospolity <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom",
+    "Sandbox_BCR_Addon_Enable_Desensitized": "Zimna krew",
+    "Sandbox_BCR_Addon_Enable_Desensitized_tooltip": "<RGB:0.6,1.0,0.2> [+] CECHA POZYTYWNA <LINE><LINE> <RGB:0.8,0.8,0.8> Pozwala zdobyć tę cechę jako nagrodę. <LINE><LINE> <RGB:0.8,0.3,1.0> Rzadkość: Bardzo Rzadki <LINE><LINE> <RGB:0.6,0.6,0.6> Added by: I Am Not Your Mom"
 }

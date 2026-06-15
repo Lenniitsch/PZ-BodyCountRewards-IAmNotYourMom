@@ -122,32 +122,32 @@ Copy your icon and poster files into both the versioned directory and the root m
 
 ## sandbox-options.txt
 
-Each trait needs a boolean toggle. The page must be `BodyCountRewardsThirdPartyTraits` and the option name must follow the pattern `<YourNamespace>.allow_<TRAIT_ID>`. The namespace must match what you pass to `RegisterCustomTraits()`.
+Each trait needs a boolean toggle. The page must be `BodyCountRewardsThirdPartyTraits` and the option name must follow the pattern `<YourNamespace>.allow_<TraitId>`. The namespace must match what you pass to `RegisterCustomTraits()`.
 
 ```txt
 VERSION = 1,
 
-option YourNamespace.allow_BRAVE
+option YourNamespace.allow_base_Brave
 {
     type = boolean,
     default = true,
     page = BodyCountRewardsThirdPartyTraits,
-    translation = BCR_Addon_Enable_BRAVE,
+    translation = BCR_Addon_Enable_Brave,
 }
 
-option YourNamespace.allow_DESENSITIZED
+option YourNamespace.allow_base_Desensitized
 {
     type = boolean,
     default = true,
     page = BodyCountRewardsThirdPartyTraits,
-    translation = BCR_Addon_Enable_DESENSITIZED,
+    translation = BCR_Addon_Enable_Desensitized,
 }
 ```
 
 Key rules:
 - `VERSION = 1,` header line is required.
 - `page = BodyCountRewardsThirdPartyTraits` is the fixed page name. BCR reads all options on this page.
-- `option <Namespace>.allow_<TRAIT_ID>` is the naming convention. The namespace must match your `RegisterCustomTraits()` call.
+- `option <Namespace>.allow_<TraitId>` is the naming convention. Replace `:` in the trait ID with `_` (e.g. `"base:Brave"` becomes `allow_base_Brave`). The namespace must match your `RegisterCustomTraits()` call.
 - `translation` key is your translation lookup key. Define it in `Sandbox.json`.
 
 ## Translation Setup
@@ -158,17 +158,17 @@ Create `Translate/EN/Sandbox.json` (and matching files for each language you sup
 {
     "Sandbox_BodyCountRewardsThirdPartyTraits": "Third-Party Trait Toggles",
 
-    "Sandbox_BCR_Addon_Enable_BRAVE": "Enable Brave",
-    "Sandbox_BCR_Addon_Enable_BRAVE_tooltip": "Allow Brave in the reward pool.<LINE> <RGB:0.67,0.26,0.26> Cost 4 (Uncommon) <LINE> A higher zombie kill count has a higher chance of giving you this trait.",
+    "Sandbox_BCR_Addon_Enable_Brave": "Enable Brave",
+    "Sandbox_BCR_Addon_Enable_Brave_tooltip": "Allow Brave in the reward pool.<LINE> <RGB:0.67,0.26,0.26> Cost 4 (Uncommon) <LINE> A higher zombie kill count has a higher chance of giving you this trait.",
 
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED": "Enable Desensitized",
-    "Sandbox_BCR_Addon_Enable_DESENSITIZED_tooltip": "Allow Desensitized in the reward pool.<LINE> <RGB:1.0,0.68,0.26> Cost 8 (Very Rare) <LINE> A higher zombie kill count has a higher chance of giving you this trait."
+    "Sandbox_BCR_Addon_Enable_Desensitized": "Enable Desensitized",
+    "Sandbox_BCR_Addon_Enable_Desensitized_tooltip": "Allow Desensitized in the reward pool.<LINE> <RGB:1.0,0.68,0.26> Cost 8 (Very Rare) <LINE> A higher zombie kill count has a higher chance of giving you this trait."
 }
 ```
 
 Rules:
 - `Sandbox_BodyCountRewardsThirdPartyTraits` is the sandbox page title. Define this in every language file.
-- Translation keys follow the pattern `Sandbox_BCR_Addon_Enable_<TRAIT_ID>`.
+- Translation keys follow the pattern `Sandbox_BCR_Addon_Enable_<TraitId>`.
 - Tooltip keys append `_tooltip`.
 - Use `<LINE>` for line breaks and `<RGB:R,G,B>` for colored text in tooltips.
 - Copy the English JSON to each language folder. AI-generated translations are acceptable for the initial release. Mark them as automatically translated so native speakers can contribute improvements.
@@ -182,13 +182,13 @@ Rules:
 ```lua
 -- CORRECT
 local POSITIVE_TRAITS = {
-    { id = "BRAVE",          cost = -4 },  -- negative cost = earnable
-    { id = "DESENSITIZED",   cost = -8 },
+    { id = "base:Brave",      cost = -4 },  -- negative cost = earnable
+    { id = "base:Desensitized", cost = -8 },
 }
 
 local NEGATIVE_TRAITS = {
-    { id = "SHORT_SIGHTED",  cost = 2 },   -- positive cost = removable
-    { id = "DEAF",           cost = 12 },
+    { id = "base:ShortSighted", cost = 2 },   -- positive cost = removable
+    { id = "base:Deaf",       cost = 12 },
 }
 ```
 
@@ -205,9 +205,7 @@ Higher cost means lower drop chance in BCR's weighted random selection. Traits w
 
 ### Trait IDs
 
-Trait IDs must match Project Zomboid's `CharacterTrait` static fields exactly (UPPER_SNAKE_CASE). BCR validates every trait ID against the engine via `CharacterTrait[TRAIT_ID]`. If the trait does not exist in the game, `RegisterCustomTraits()` rejects it.
-
-Only vanilla PZ traits can be registered. Custom traits from other mods are not supported.
+Trait IDs use the ResourceLocation format (`namespace:PascalCase`), e.g. `"base:Brave"`, `"base:Deaf"`. BCR validates every trait ID against the engine via `CharacterTrait.get(ResourceLocation.of(traitId))`. This works for vanilla traits (`base:` namespace) and custom mod traits (`ModNamespace:TraitName`) equally.
 
 ### Exclusions (Mutual Exclusivity)
 
@@ -215,17 +213,21 @@ Exclusions define which traits block each other. BCR checks exclusivity before o
 
 ```lua
 local EXCLUSIONS = {
-    BRAVE               = {"COWARDLY", "AGORAPHOBIC", "CLAUSTROPHOBIC"},
-    DESENSITIZED        = {"ADRENALINE_JUNKIE", "AGORAPHOBIC", "CLAUSTROPHOBIC", "COWARDLY", "HEMOPHOBIC"},
-    SHORT_SIGHTED       = {"EAGLE_EYED"},
-    HARD_OF_HEARING     = {"KEEN_HEARING", "DEAF"},
-    INSOMNIAC           = {"NEEDS_LESS_SLEEP"},
-    DEAF                = {"KEEN_HEARING", "HARD_OF_HEARING"},
-    -- Reverse directions — must be added manually
-    ADRENALINE_JUNKIE   = {"DESENSITIZED"},
-    EAGLE_EYED          = {"SHORT_SIGHTED"},
-    KEEN_HEARING        = {"HARD_OF_HEARING", "DEAF"},
-    NEEDS_LESS_SLEEP    = {"INSOMNIAC"},
+    ["base:Brave"]          = {"base:Cowardly", "base:Agoraphobic", "base:Claustrophobic"},
+    ["base:Desensitized"]   = {"base:AdrenalineJunkie", "base:Agoraphobic", "base:Claustrophobic", "base:Cowardly", "base:Hemophobic"},
+    ["base:ShortSighted"]   = {"base:EagleEyed"},
+    ["base:HardOfHearing"]  = {"base:KeenHearing", "base:Deaf"},
+    ["base:Insomniac"]      = {"base:NeedsLessSleep"},
+    ["base:Deaf"]           = {"base:KeenHearing", "base:HardOfHearing"},
+    -- Reverse directions for traits in the base BCR exclusion table
+    ["base:AdrenalineJunkie"] = {"base:Desensitized"},
+    ["base:EagleEyed"]        = {"base:ShortSighted"},
+    ["base:KeenHearing"]      = {"base:HardOfHearing", "base:Deaf"},
+    ["base:NeedsLessSleep"]   = {"base:Insomniac"},
+    ["base:Cowardly"]         = {"base:Brave", "base:Desensitized"},
+    ["base:Agoraphobic"]      = {"base:Brave", "base:Desensitized"},
+    ["base:Claustrophobic"]   = {"base:Brave", "base:Desensitized"},
+    ["base:Hemophobic"]       = {"base:Desensitized"},
 }
 ```
 
@@ -243,9 +245,9 @@ BCR.RegisterCustomTraits(sourceName, sandboxNamespace, positiveTraits, negativeT
 |-----------|------|-------------|
 | `sourceName` | string | Display name shown in the Stats UI catalog (e.g. `"I Am Not Your Mom"`) |
 | `sandboxNamespace` | string | Prefix for sandbox toggles, must match `sandbox-options.txt` (e.g. `"IAmNotYourMom"`) |
-| `positiveTraits` | table or nil | Array of `{ id = "TRAIT_ID", cost = -4 }` entries. Pass `nil` if none. |
-| `negativeTraits` | table or nil | Array of `{ id = "TRAIT_ID", cost = 2 }` entries. Pass `nil` if none. |
-| `exclusions` | table or nil | Table of `{ ["TRAIT_ID"] = {"BLOCKED_ID", ...} }`. Pass `nil` if none. |
+| `positiveTraits` | table or nil | Array of `{ id = "base:TraitId", cost = -4 }` entries. Pass `nil` if none. |
+| `negativeTraits` | table or nil | Array of `{ id = "base:TraitId", cost = 2 }` entries. Pass `nil` if none. |
+| `exclusions` | table or nil | Table of `{ ["base:TraitId"] = {"base:BlockedId", ...} }`. Pass `nil` if none. |
 
 **Returns:** The number of successfully registered traits, or crashes with an error message.
 
@@ -279,16 +281,16 @@ local ADDON_NAME = "Your Addon Name"
 local SANDBOX_NAMESPACE = "YourNamespace"
 
 local POSITIVE_TRAITS = {
-    { id = "TRAIT_ID", cost = -4 },
+    { id = "base:TraitId", cost = -4 },
 }
 
 local NEGATIVE_TRAITS = {
-    { id = "WEAKNESS_ID", cost = 2 },
+    { id = "base:WeaknessId", cost = 2 },
 }
 
 local EXCLUSIONS = {
-    TRAIT_ID        = {"CONFLICTING_TRAIT"},
-    CONFLICTING_TRAIT = {"TRAIT_ID"},
+    ["base:TraitId"]        = {"base:ConflictingTrait"},
+    ["base:ConflictingTrait"] = {"base:TraitId"},
 }
 
 function YourAddon_RunTests()
@@ -381,25 +383,28 @@ See `BCRIAmNotYourMom.lua` for the full working example with 23 test cases.
 ### 1. Wrong cost polarity
 Positive (earnable) traits need negative costs. Negative (removable) traits need positive costs. Getting this wrong will log warnings from BCR and produce incorrect drop weights.
 
-### 2. Trait ID does not match CharacterTrait field
-Trait IDs must exactly match PZ's `CharacterTrait.TRAIT_NAME` constants in UPPER_SNAKE_CASE. BCR validates every ID against the engine. Bogus IDs are rejected silently (the registration returns 0 for them).
+### 2. Trait ID does not match ResourceLocation format
+Trait IDs must use `namespace:PascalCase` format (e.g. `"base:Brave"`, `"base:HardOfHearing"`). BCR validates every ID against the engine via `CharacterTrait.get(ResourceLocation.of(traitId))`. Bogus IDs are rejected silently (the registration returns 0 for them).
 
 ### 3. Exclusions not bidirectional
-If `TRAIT_A = {"TRAIT_B"}` is defined, `TRAIT_B = {"TRAIT_A"}` must also be defined. BCR does not auto-reverse exclusions.
+If `["base:TraitA"] = {"base:TraitB"}` is defined, `["base:TraitB"] = {"base:TraitA"}` must also be defined. BCR does not auto-reverse exclusions.
 
 ### 4. Lua file in wrong module context
 Place your Lua file in `shared/`. If placed in `client/` or `server/`, it will not load in the other context. BCR addons need shared context for both SP and MP.
 
 ### 5. Sandbox namespace mismatch
-The namespace passed to `RegisterCustomTraits()` must match the prefix in your `sandbox-options.txt` option names (`<namespace>.allow_<TRAIT_ID>`).
+The namespace passed to `RegisterCustomTraits()` must match the prefix in your `sandbox-options.txt` option names (`<namespace>.allow_<TraitId>`).
 
-### 6. Custom non-vanilla traits and save safety
+### 6. Trait IDs must use ResourceLocation format
+Trait IDs must use `namespace:PascalCase` format (e.g. `"base:Brave"`, `"YourMod:TraitName"`). BCR resolves every trait ID via `CharacterTrait.get(ResourceLocation.of(traitId))`. This works for vanilla traits (`base:` namespace) and custom mod traits equally.
+
+### 7. Removing addon mid-save
 If your addon registers custom traits that do not exist in vanilla PZ, removing the addon may crash saves that still reference those traits. This is your responsibility as the addon author. This addon only registers vanilla traits (Brave, Desensitized, etc.), so it is safe to remove.
 
-### 7. Not checking the return count
+### 8. Not checking the return count
 `RegisterCustomTraits()` returns a number. Zero means failure. Always check the return value.
 
-### 8. Not wrapping registration in pcall
+### 9. Not wrapping registration in pcall
 If BCR is not loaded, `RegisterCustomTraits` will not exist and the call will crash. Always `pcall`-wrap.
 
 ## License
