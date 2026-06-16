@@ -1,4 +1,4 @@
-# BodyCountRewards — I Am Not Your Mom
+# BodyCountRewards (Addon) — I Am Not Your Mom
 
 > *I am not your mom. Add whatever unrealistic, overpowered traits you want.*
 
