@@ -2,13 +2,13 @@ version=1
 id=3745224257
 title=Body Count Rewards (Addon) - I Am Not Your Mom
 description=[i]I am not your mom. Add whatever traits you want. Deaf? Fine. Brave? Sure. Cannot feel fear anymore? Go for it.[/i]
-description=This [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3660382016]Body Count Rewards (BCR)[/url]-Addon adds unrealistic / overpowered to earn midgame vanilla traits to Body Count Rewards.
+description=This [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3660382016]Body Count Rewards (BCR)[/url] addon adds 6 vanilla traits to the BCR reward pool that the base mod excludes.
 description=
 description=[b]REQUIRES [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3660382016]Body Count Rewards (BCR)[/url][/b].
 description=[b]Compatible with B42.19+ | SP and MP[/b]
 description=
-description=[h2]Added Traits[/h2]
-description=All six traits work with BCR's weighted random system. Higher trait cost means lower drop chance.
+description=[h2]Added Traits (6 total)[/h2]
+description=All six traits use BCR's weighted random system. Higher trait cost means lower drop chance.
 description=
 description=[b]Positive (Earnable):[/b]
 description=Brave, Desensitized
@@ -16,48 +16,44 @@ description=
 description=[b]Negative (Removable):[/b]
 description=Short Sighted, Hard of Hearing, Insomniac, Deaf
 description=
-description=[h2]For players[/h2]
-description=This is a fully functional addon. Subscribe, enable it, and six new traits join your BCR reward pool. Use it. Enjoy it. Break your game balance. I am not your mom.
-description=
-description=[b]Note:[/b] I will not develop addons for other mods. This project is a template. Do it yourself.
-description=
 description=[h2]Sandbox Options[/h2]
-description=Just as in the main BCR Mod, each trait has its own enable/disable toggle in the [b]BodyCountRewards - Addon Traits[/b] sandbox page. Toggle them off if your mom is reading.
+description=Each trait has its own toggle in the [b]BodyCountRewards - Addon Traits[/b] sandbox page.
 description=
-description=[h2]Adding Traits From Other Mods[/h2]
-description=Want traits from your favorite mod to work with Body Count Rewards? Ask the mod author about it. Politely. A friendly message goes a long way, and the worst they can say is no. Point them to this addon or the [url=https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom]GitHub repository[/url] for developer guidance — it is only about 65 lines of Lua.
-description=
-description=[h2]Compatibility[/h2]
+description=[h2]Other BCR Addons[/h2]
 description=[list]
-description=[*] Build 42.19+ (Unstable). SP and MP.
-description=[*] Requires Body Count Rewards (BCR) loaded first.
-description=[*] Safe to remove. All six traits in this addon are vanilla traits, so they stay on your character permanently. For other third-party addons that register custom non-vanilla traits: if you remove the addon, those traits may crash your save. That is on the addon author, not BCR or this mod.
-description=[*] No vanilla file overwrites. Works with Skill Recovery Journal.
+description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3773768335]MoreTraits[/url] - 77 traits from the MoreTraits mod
+description=[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3773770389]SomewhatTraits[/url] - 32 traits from the SomewhatTraits mod
 description=[/list]
-description=
-description=[h2]Supported languages[/h2]
-description=English | Deutsch | Español | Русский | Português (BR) | 简体中文 | 한국어 | Türkçe | Français | Polski | Українська
 description=
 description=[h2]FAQ[/h2]
 description=
 description=[b]Q: Why are these traits not in the base BCR mod?[/b]
-description=A: The base mod aims for lore-friendly, balanced selections. This addon is for players who want anything goes. I am not your mom. You decide.
+description=A: The base mod aims for lore-friendly, balanced selections. This addon is for anything goes. I am not your mom. You decide.
 description=
 description=[b]Q: Can other mods add traits like this?[/b]
-description=A: Yes. BCR has a public extensibility API. This addon doubles as a reference implementation. See the For Mod Developers section below.
+description=A: Yes. BCR has a public extensibility API. This addon doubles as a reference implementation.
 description=
 description=[b]Q: Removed Short Sighted but still can't see far?[/b]
-description=A: The trait is removed correctly from your character, but the visual effect (blur/vision range) does not refresh until you reload the game (quit to main menu and load your save). This is a PZ limitation, not a BCR bug.
+description=A: The trait is removed correctly, but the visual effect does not refresh until you reload. PZ limitation, not a BCR bug.
+description=
+description=[h2]About this addon[/h2]
+description=[list]
+description=[*] This addon does not change how any trait works. It just tells BCR to offer them as rewards. If a trait behaves oddly, that is a vanilla question.
+description=[*] Compatible with Build 42.19+. SP and MP. Requires BCR loaded first.
+description=[*] Safe to remove. Traits stay on your character. No vanilla file overwrites.
+description=[/list]
 description=
 description=[h2]For Mod Developers[/h2]
-description=[b]Download this mod and study the source code.[/b] It is a simple example of integrating custom traits into Body Count Rewards:
+description=Study the source code for a working example of adding traits to BCR:
 description=[list]
-description=[*] Call [b]BCR.RegisterCustomTraits()[/b] with your trait data, exclusions, and sandbox namespace
-description=[*] Traits merge automatically into BCR's reward pools, UI catalog, and history
-description=[*] BCR core provides [b]BCR.RunThirdPartyTests()[/b] to verify all addons at once.
-description=[*] Your custom traits merge into the reward pools, stats UI, and history - no hacks needed
+description=[*] Call [b]BCR.RegisterCustomTraits()[/b] with trait data, exclusions, and sandbox namespace
+description=[*] Traits merge automatically into reward pools, the stats catalog, and history
+description=[*] Verify with [b]BCR.RunThirdPartyTests()[/b]
 description=[/list]
-description=[b]Full source and further references at [/b] [url=https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom]GitHub[/url]
+description=[b]Source:[/b] [url=https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom]GitHub[/url]
+description=
+description=[h2]Supported languages[/h2]
+description=English | Deutsch | Espanol | Pyccknn | Portugues (BR) | 简体中文 | 한국어 | Turkce | Francais | Polski | Ykpaiнcbka
 description=
 description=[h2]AI Transparency[/h2]
 description=I designed the architecture and wrote the core logic myself. AI assisted with coding, debugging, unit tests, and this workshop page. I believe in being upfront about tools used.
@@ -70,6 +66,5 @@ description=Open source under the [url=https://opensource.org/licenses/MIT]MIT L
 description=[url=https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom]GitHub Repository[/url]
 description=
 description=[i]If this mod added the right kind of chaos to your run, a thumbs up is always appreciated.[/i]
-description=
-tags=Build 42;Balance;Multiplayer;Traits
+tags=Build 42;Multiplayer;Traits
 visibility=public
