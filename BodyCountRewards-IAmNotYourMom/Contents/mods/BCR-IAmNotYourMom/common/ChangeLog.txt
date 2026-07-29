@@ -23,3 +23,10 @@ This addon is also a living code example of BCR's third-party extensibility API.
 Requires BodyCountRewards (BCR) loaded first.
 This mod is safe to remove mid-game, since it only adds more vanilla traits. So earned traits stay on your character. This might differ for custom trait mods.
 [ ------ ]
+
+[ v1.1.0 - Body Count Rewards Addon ]
+
+HOUSEKEEPING UPDATE
+- Updated steam workshop preview images
+- Minor metadata and documentation updates
+[ ------ ]
