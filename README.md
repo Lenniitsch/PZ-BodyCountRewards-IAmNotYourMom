@@ -203,6 +203,8 @@ The absolute value determines drop rarity at runtime:
 
 Higher cost means lower drop chance in BCR's weighted random selection. Traits with cost 10+ will almost never appear until cheaper traits are cleared from the pool.
 
+BCR repairs two common mistakes instead of rejecting them: a missing cost is filled from the engine's trait definition, and a cost with the wrong sign is flipped. Both cases print an auto-corrected warning. Only unresolvable IDs, duplicate registrations, and traits that are already in the base BCR lists are skipped.
+
 ### Trait IDs
 
 Trait IDs use the ResourceLocation format (`namespace:PascalCase`), e.g. `"base:Brave"`, `"base:Deaf"`. BCR validates every trait ID against the engine via `CharacterTrait.get(ResourceLocation.of(traitId))`. This works for vanilla traits (`base:` namespace) and custom mod traits (`ModNamespace:TraitName`) equally.
@@ -414,7 +416,7 @@ See `BCRIAmNotYourMom.lua` for the complete registration example.
 ## Common Pitfalls
 
 ### 1. Wrong cost polarity
-Earnable traits = negative cost. Removable traits = positive cost.
+Earnable traits = negative cost. Removable traits = positive cost. BCR flips wrong signs automatically (with a warning), but ship them correct anyway.
 
 ### 2. Bogus trait ID
 Must use `namespace:PascalCase` format. Bogus IDs are rejected.
