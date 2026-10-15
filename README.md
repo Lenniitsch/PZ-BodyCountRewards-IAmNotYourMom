@@ -38,7 +38,7 @@ Each trait has its own enable/disable toggle in the `BodyCountRewardsThirdPartyT
 
 Skip to the [Developer Guide](#developer-guide) below for a full walkthrough.
 
-I will not develop addons for other mods. This project is a template. Do it yourself.
+This project is a template: copy it and build your own trait pack.
 
 ---
 
@@ -405,7 +405,7 @@ See `BCRIAmNotYourMom.lua` for the complete registration example.
 
 ## Compatibility
 
-- Build 42.19+ (Unstable)
+- Build 42.20+ (Stable)
 - SP and MP
 - Requires Body Count Rewards (BCR) loaded first
 - Safe to remove mid-save if your traits are vanilla traits
