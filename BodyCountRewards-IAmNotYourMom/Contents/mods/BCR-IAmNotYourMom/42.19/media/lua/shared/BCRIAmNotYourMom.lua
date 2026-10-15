@@ -1,5 +1,5 @@
 -- ============================================================
--- BCR-IAmNotYourMom v1.0.0 -- Addon for BodyCountRewards (BCR)
+-- BCR-IAmNotYourMom v1.1.0 -- Addon for BodyCountRewards (BCR)
 -- Adds unrealistic / overpowered vanilla traits that the base
 -- BCR mod considers "not lore-friendly."
 --

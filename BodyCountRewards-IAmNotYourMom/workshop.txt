@@ -5,7 +5,7 @@ description=[i]I am not your mom. Add whatever traits you want. Deaf? Fine. Brav
 description=This [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3660382016]Body Count Rewards (BCR)[/url] addon adds 6 vanilla traits to the BCR reward pool that the base mod excludes.
 description=
 description=[b]REQUIRES [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3660382016]Body Count Rewards (BCR)[/url][/b].
-description=[b]Compatible with B42.19+ | SP and MP[/b]
+description=[b]Compatible with B42.20+ (Stable) | SP and MP[/b]
 description=
 description=[h2]Added Traits (6 total)[/h2]
 description=All six traits use BCR's weighted random system. Higher trait cost means lower drop chance.
@@ -66,5 +66,7 @@ description=Open source under the [url=https://opensource.org/licenses/MIT]MIT L
 description=[url=https://github.com/Lenniitsch/PZ-BodyCountRewards-IAmNotYourMom]GitHub Repository[/url]
 description=
 description=[i]If this mod added the right kind of chaos to your run, a thumbs up is always appreciated.[/i]
+description=
+description=[img]https://i.imgur.com/eZp8dXD.gif[/img]
 tags=Build 42;Multiplayer;Traits
 visibility=public
